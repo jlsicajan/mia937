@@ -1,9 +1,21 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "resources/assets/sass/_variables";
+@import "~font-awesome/scss/font-awesome.scss";
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@mixin set-border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 
-// Variables
-@import "variables";
+@mixin disable-text-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+html, body, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
