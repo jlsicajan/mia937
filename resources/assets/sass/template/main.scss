@@ -1,5 +1,12 @@
 .mia-header{
   background-image: url("https://static.wixstatic.com/media/b2c0a7_f3ac39ecaa9c494fbbfb447fddc3b5a9.jpg/v1/fill/w_1920,h_542,al_c,q_85,usm_0.66_1.00_0.01/b2c0a7_f3ac39ecaa9c494fbbfb447fddc3b5a9.webp");
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .row{
+    height: 100%;
+    padding-left: 20%;
+  }
 }
 
 .social-icons-container{
@@ -7,6 +14,7 @@
   right: 0;
   top: 25%;
   border-radius: 10px;
+  z-index: 2;
   .social-icons{
     border: 0px solid rgba(50, 50, 50, 1);
     background-color: rgba(255, 255, 255, 0.61);
@@ -23,4 +31,20 @@
       font-size: 1.5rem;
     }
   }
+}
+
+.bg-white{
+  background-color: #ffffff !important;
+}
+
+.color-white{
+  color: #ffffff !important;
+}
+
+.border-top-white{
+  border-top: 3px solid #ffffff;
+}
+
+.border-bottom-white{
+  border-bottom: 3px solid #ffffff;
 }

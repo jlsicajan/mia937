@@ -17,40 +17,36 @@
     @stack('head')
 </head>
 <body>
+
 <nav class="navbar navbar-toggleable-md navbar-mia">
+    <div class="container px-5 ml-0 ml-sm-auto ml-md-auto ml-lg-auto">
+        <div class="navbar-brand navbar-logo"></div>
+        <div class="collapse navbar-collapse hidden-sm-down" id="mainnavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item {{ (Request::is('home') ? 'active' : '') }}"><a class="nav-link" href="{{ route('home') }}">INICIO<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item {{ (Request::is('pro') ? 'active' : '') }}"><a class="nav-link" href="{{ route('pro') }}">PROGRAMACION</a></li>
+                <li class="nav-item {{ (Request::is('staff') ? 'active' : '') }}"><a class="nav-link" href="{{ route('staff') }}">STAFF</a></li>
+                <li class="nav-item {{ (Request::is('cinema') ? 'active' : '') }}"><a class="nav-link" href="{{ route('cinema') }}">CINE</a></li>
+                <li class="nav-item {{ (Request::is('photos') ? 'active' : '') }}"><a class="nav-link" href="{{ route('photos') }}">FOTOS</a></li>
+                <li class="nav-item {{ (Request::is('the20') ? 'active' : '') }}"><a class="nav-link" href="{{ route('the20') }}">LOS 20+</a></li>
+            </ul>
+        </div>
+
+    </div>
     <button class="navbar-toggler navbar-toggler-right inverse navbar-toggler-mia" type="button" data-toggle="collapse" data-target="#mainnavbar"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars open-menu-sm"></i>
         <i class="fa fa-close close-menu-sm"></i>
     </button>
-    <a class="navbar-brand" href="#">Mia 93.7</a>
-    <div class="collapse navbar-collapse hidden-sm-down" id="mainnavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">INICIO<span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PROGRAMACION</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">STAFF</a></li>
-            <li class="nav-item {{ (Request::is('cine') ? 'active' : '') }}">
-                <a class="nav-link" href="{{ route('cine') }}">CINE</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">FOTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LOS 20+</a></li>
-        </ul>
-        </span>
-    </div>
-
-
     <div class="menu-sm">
         <ul class="navbar-nav d-flex align-items-center">
-            <li class="nav-item"><a class="nav-link" href="#">INICIO<span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PROGRAMACION</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">STAFF</a></li>
-            <li class="nav-item {{ (Request::is('cine') ? 'active' : '') }}">
-                <a class="nav-link" href="{{ route('cine') }}">CINE</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">FOTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LOS 20+</a></li>
+            <li class="nav-item {{ (Request::is('home') ? 'active' : '') }}"><a class="nav-link" href="{{ route('home') }}">INICIO<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item {{ (Request::is('pro') ? 'active' : '') }}"><a class="nav-link" href="{{ route('pro') }}">PROGRAMACION</a></li>
+            <li class="nav-item {{ (Request::is('staff') ? 'active' : '') }}"><a class="nav-link" href="{{ route('staff') }}">STAFF</a></li>
+            <li class="nav-item {{ (Request::is('cinema') ? 'active' : '') }}"><a class="nav-link" href="{{ route('cinema') }}">CINE</a></li>
+            <li class="nav-item {{ (Request::is('photos') ? 'active' : '') }}"><a class="nav-link" href="{{ route('photos') }}">FOTOS</a></li>
+            <li class="nav-item {{ (Request::is('the20') ? 'active' : '') }}"><a class="nav-link" href="{{ route('the20') }}">LOS 20+</a></li>
         </ul>
-        </span>
     </div>
 </nav>
 <div class="social-icons-container">
@@ -73,9 +69,9 @@
     
     function main_function(){
         $('.navbar-toggler-mia').unbind('click').click(function(){
-            $('.menu-sm').toggle('fast');
-            $('.open-menu-sm').toggle('fast');
-            $('.close-menu-sm').toggle('fast');
+            $('.menu-sm').toggle();
+            $('.open-menu-sm').toggle();
+            $('.close-menu-sm').toggle();
         });
     }
 </script>

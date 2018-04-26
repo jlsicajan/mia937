@@ -11,10 +11,18 @@
   .nav-item {
     .nav-link {
       color: $navbar-items-color;
+      line-height: 16px;
+      font-size: 13px;
+
       &:hover {
         color: $navbar-items-color-hover;
       }
     }
+
+  }
+
+  .active{
+    color: $navbar-items-color-hover !important;
   }
 
   .menu-sm {
@@ -41,6 +49,15 @@
       }
     }
   }
+
+  .container{
+    .navbar-logo{
+      background-image: url("/img/logo/logo.png");
+      height: 50px;
+      width: 105px;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .navbar-toggler-mia {
@@ -50,5 +67,12 @@
 
   i {
     color: #ffffff;
+  }
+}
+
+//Mobile changes
+@include media-breakpoint-only(xs) {
+  .navbar-mia {
+    height: 63px;
   }
 }
