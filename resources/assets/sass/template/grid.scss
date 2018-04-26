@@ -1,0 +1,40 @@
+.bg-grid-secondary{
+  background-color: $background-secondary;
+}
+
+.bg-grid-default{
+  background-color: $background-default;
+}
+
+.grid-block{
+  height: 575px;
+  width: 475px;
+}
+
+.grid-header{
+  background-color: $background-secondary;
+  height: 60px;
+  width: 475px;
+  position: relative;
+  .gradient{
+    background-image: url("https://static.wixstatic.com/media/b2c0a7_ed77a067ac1c4ff8af19714bd4a25903.png/v1/fill/w_240,h_59,al_c,usm_0.66_1.00_0.01/b2c0a7_ed77a067ac1c4ff8af19714bd4a25903.png");
+    height: 60px;
+    width: 146px;
+  }
+}
+
+.grid-header:after {
+  content: '';
+  /* display: block; */
+  position: absolute;
+  /* top: 10px; */
+  /* left: 100%; */
+  left: 10%;
+  bottom: -26px;
+  width: 0;
+  height: 0;
+  border-color: $background-secondary transparent transparent transparent;
+  border-style: solid;
+  border-width: 13px;
+  right: 0;
+}
