@@ -61,6 +61,11 @@
 @yield('content')
 @stack('scripts')
 <script type="text/javascript">
+    (function(){
+        $('.menu-sm').hide();
+        $('.close-menu-sm').hide();
+    });
+
     $(document).ready(function(){
         $('.menu-sm').hide();
         $('.close-menu-sm').hide();

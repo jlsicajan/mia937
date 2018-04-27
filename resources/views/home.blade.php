@@ -14,49 +14,22 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 p-4">
-                <div class="row flex-column">
-                    <div class="grid-header"></div>
-                    <div class="grid-block bg-grid-default"></div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 p-4">
-                <div class="row flex-column">
-                    <div class="grid-header"></div>
-                    <div class="grid-block bg-grid-default"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 p-4">
-                <div class="row flex-column">
-                    <div class="grid-header"></div>
-                    <div class="grid-block bg-grid-default"></div>
-                </div>
+       @include('elements.for_grid.space_block')
+       @include('elements.for_grid.middle_space_block')
 
-            </div>
-            <div class="col-12 col-md-6 p-4">
-                <div class="row flex-column">
-                    <div class="grid-header"></div>
-                    <div class="grid-block bg-grid-default"></div>
-                </div>
-
-            </div>
-        </div>
         <div class="row">
-            <div class="col-12 col-md-6 p-4">
-                <div class="row flex-column">
-                    <div class="grid-header"></div>
-                    <div class="grid-block bg-grid-default"></div>
-                </div>
-
+            <div class="col-12 col-md-6 py-md-4 pd-2rem">
+                @include('elements.for_grid.card_left', ['grid_content' => ''])
+                @include('elements.for_grid.grid_left', ['title' => 'NOTICIAS', 'grid_content' => ''])
+                @include('elements.for_grid.grid_left', ['title' => 'TITLE', 'grid_content' => ''])
+                @include('elements.for_grid.grid_left', ['title' => 'TITLE', 'grid_content' => '', 'classes' => 'grid-header-primary'])
             </div>
-            <div class="col-12 col-md-6 p-4">
-                <div class="row flex-column">
-                    <div class="grid-header"></div>
-                    <div class="grid-block bg-grid-default"></div>
-                </div>
+            <div class="col-12 col-md-6 py-md-4">
+                @include('elements.for_grid.grid_right', ['title' => 'PROGRAMACIÓN', 'grid_content' => ''])
+                @include('elements.for_grid.grid_right', ['title' => 'TITLE', 'grid_content' => '', 'classes' => 'grid-header-primary'])
+                @include('elements.for_grid.grid_right', ['title' => 'TITLE', 'grid_content' => ''])
+                @include('elements.for_grid.card_right', ['grid_content' => ''])
+
             </div>
         </div>
     </div>
