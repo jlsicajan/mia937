@@ -39,7 +39,7 @@
         <i class="fa fa-close close-menu-sm"></i>
     </button>
     <div class="menu-sm">
-        <ul class="navbar-nav d-flex align-items-center">
+        <ul class="navbar-nav d-flex align-items-center flex-column">
             <li class="nav-item {{ (Request::is('home') ? 'active' : '') }}"><a class="nav-link" href="{{ route('home') }}">INICIO<span class="sr-only">(current)</span></a></li>
             <li class="nav-item {{ (Request::is('pro') ? 'active' : '') }}"><a class="nav-link" href="{{ route('pro') }}">PROGRAMACION</a></li>
             <li class="nav-item {{ (Request::is('staff') ? 'active' : '') }}"><a class="nav-link" href="{{ route('staff') }}">STAFF</a></li>

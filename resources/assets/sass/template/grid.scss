@@ -21,19 +21,13 @@
 
 .grid-space{
   height: 250px;
-  width: 475px;
 }
 .grid-space-middle{
   height: 125px;
-  width: 475px;
 }
 
 .grid-header-primary{
   background-color: $background-primary !important;
-
-  .gradient{
-    display: none !important;
-  }
 }
 
 .grid-header-primary:after{
@@ -46,6 +40,7 @@
   width: 475px;
   position: relative;
   left: 0;
+  padding-right: 0 !important;
 
   .gradient{
     background-image: url("/img/grid/gradient.png");
@@ -61,13 +56,14 @@
   /* top: 10px; */
   /* left: 100%; */
   left: 10%;
-  bottom: -26px;
+  bottom: -25px;
   width: 0;
   height: 0;
   border-color: $background-secondary transparent transparent transparent;
   border-style: solid;
   border-width: 13px;
   right: 0;
+  z-index: 2;
 }
 
 //cards
@@ -77,4 +73,32 @@
   position: relative;
   left: 0;
 
+}
+
+//Mobile changes
+@include media-breakpoint-only(xs) {
+  .pd-2rem{
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .grid-header{
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .grid-block{
+    width: 100%;
+  }
+
+  .right-grid-resize{
+    padding-left: 1rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .grid-header:after {
+    bottom: -24px;
+    z-index: 2;
+  }
 }

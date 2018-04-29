@@ -1,9 +1,11 @@
 <div class="row flex-column align-items-end mb-28px">
-    <div class="grid-header {{ isset($classes) ? $classes : '' }}">
+    <div class="grid-header col-12 {{ isset($classes) ? $classes : '' }}">
         <span class="font_2 color-white font_2_grid">{{ $title }}</span>
-        <div class="gradient float-right"></div>
+        @if(isset($gradient) && $gradient)
+            <div class="gradient float-right"></div>
+        @endif
     </div>
-    <div class="grid-block bg-grid-default">
+    <div class="grid-block bg-grid-default col-12">
         {!! $grid_content !!}
     </div>
 </div>
